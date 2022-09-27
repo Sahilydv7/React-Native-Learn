@@ -12,13 +12,13 @@ import {
   useColorScheme,
 
 } from 'react-native';
-import Tabs from './src/components/BottomTabNavigationExample';
-import DrawerExample from './src/components/DrawerExample';
-import FlexExample from './src/components/FlexExample';
-import FormExample from './src/components/FormExample';
+// import Tabs from './src/components/BottomTabNavigationExample';
+// import DrawerExample from './src/components/DrawerExample';
+import FlexExample from './src/components/ExampleDrawer/FlexExample';
+// import FormExample from './src/components/FormExample';
 
-import Login from './src/components/Login';
-import Register from './src/components/Register';
+// import Login from './src/components/Login';
+// import Register from './src/components/Register';
 
 
 
@@ -28,12 +28,7 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    // <FormExample />
-    // <Login />
-    // <Register />
-    // <FlexExample />
-    <DrawerExample />
-    // <Tabs />
+    <FlexExample />
   );
 };
 
