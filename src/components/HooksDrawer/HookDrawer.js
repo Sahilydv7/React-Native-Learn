@@ -3,6 +3,10 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { Text, View } from 'react-native';
+import UseStateTabEx from './UseState/UseStateExample';
+import UseEffectTabEx from './UseEffect/UseEffectExample';
+import UseReducerTabEx from './UseReducer/USeReducerExample';
+import UseRefTabEx from './UseRef/UseRefExample';
 
 
 function FirstScreen() {
@@ -17,14 +21,20 @@ function FirstScreen() {
 
 const HookDrawer = createDrawerNavigator();
 
-function HookDrawer() {
+function HookDrawerEx() {
     return (
-        <NavigationContainer>
-            <HookDrawer.Navigator initialRouteName='Home'>
+        <NavigationContainer >
+            <HookDrawer.Navigator initialRouteName='Home' >
                 <HookDrawer.Screen name='Home' component={FirstScreen} />
+                <HookDrawer.Screen name='UseState' component={UseStateTabEx} />
+                <HookDrawer.Screen name='UseEffect' component={UseEffectTabEx} />
+                <HookDrawer.Screen name='UseReducer' component={UseReducerTabEx} />
+
+                <HookDrawer.Screen name='UseRef' component={UseRefTabEx} />
+
             </HookDrawer.Navigator>
         </NavigationContainer>
     )
 }
 
-export default HookDrawer;
+export default HookDrawerEx;
