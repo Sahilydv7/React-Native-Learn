@@ -7,6 +7,8 @@ import UseStateTabEx from './UseState/UseStateExample';
 import UseEffectTabEx from './UseEffect/UseEffectExample';
 import UseReducerTabEx from './UseReducer/USeReducerExample';
 import UseRefTabEx from './UseRef/UseRefExample';
+import UseImperativeTabEx from './UseImperativeHandle/UseImperativeHandle';
+import UseMemoTabEx from './UseMemo/useMemoExample';
 
 
 function FirstScreen() {
@@ -26,12 +28,12 @@ function HookDrawerEx() {
         <NavigationContainer >
             <HookDrawer.Navigator initialRouteName='Home' >
                 <HookDrawer.Screen name='Home' component={FirstScreen} />
+                <HookDrawer.Screen name='Usememo' component={UseMemoTabEx} />
                 <HookDrawer.Screen name='UseState' component={UseStateTabEx} />
                 <HookDrawer.Screen name='UseEffect' component={UseEffectTabEx} />
                 <HookDrawer.Screen name='UseReducer' component={UseReducerTabEx} />
-
                 <HookDrawer.Screen name='UseRef' component={UseRefTabEx} />
-
+                <HookDrawer.Screen name='UseImperative' component={UseImperativeTabEx} />
             </HookDrawer.Navigator>
         </NavigationContainer>
     )
